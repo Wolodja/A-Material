@@ -1,3 +1,11 @@
 <mat-form-field>
-  <textarea matInput matTextareaAutosize rows="2"></textarea>
+  <input 
+  (focus)="birthdate.open()"
+  [min]="minDate" 
+  [max]="maxDate" 
+  type="text" 
+  matInput 
+  [matDatepicker]="birthdate">
+  <mat-datepicker-toggle matSuffix [for]="birthdate"></mat-datepicker-toggle>
 </mat-form-field>
+<mat-datepicker #birthdate touchUi="true"></mat-datepicker>

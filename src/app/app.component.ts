@@ -7,11 +7,6 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
 
-  colors = [
-    {id: 1, name: 'Red'},
-    {id: 2, name: 'Green'},
-    {id: 3, name: 'Blue'}
-  ];
-
-  color = 2;
+  minDate = new Date(2020, 1, 1);
+  maxDate = new Date(2020, 10, 1);
 }
