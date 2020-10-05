@@ -1,14 +1,3 @@
 <mat-form-field>
-  <input 
-  ngModel 
-  #username="ngModel"
-  name="username"
-  type="text" matInput placeholder="Username" required>
-  
-  <span matSuffix>@domain.com</span>
-  <span matPrefix>admin.</span>
-  <mat-error *ngIf="username.invalid && username.errors.required">
-    Username field is required.
-  </mat-error>
-  <mat-hint>Type a unique username</mat-hint>
+  <textarea matInput matTextareaAutosize rows="2"></textarea>
 </mat-form-field>
