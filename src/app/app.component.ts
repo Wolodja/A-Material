@@ -1,3 +1,4 @@
+import { Observable, timer } from 'rxjs';
 import { Component } from '@angular/core';
 
 @Component({
@@ -7,13 +8,14 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
 
-  progress = 0;
-  timer;
+  isLoading = false;
 
   constructor() {
-    this.timer = setInterval(() => {
-      this.progress++;
-      if (this.progress === 100) { clearInterval(this.timer); }
-    }, 20);
+    this.isLoading = true;
+    this.getCourses().subscribe( x => this.isLoading = false);
+  }
+
+  getCourses() {
+    return timer(2000);
   }
 }
