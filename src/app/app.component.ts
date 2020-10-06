@@ -7,18 +7,13 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
 
-  categories = [
-    { name: 'Beginner' },
-    { name: 'Intermidiate' },
-    { name: 'Advanced' }
-  ]
+  progress = 0;
+  timer;
 
-  selectCategory(category) {
-    this.categories
-      .filter(c => c != category)
-      .forEach(c => c['selected'] = false);
-
-    category.selected = !category.selected;
-
+  constructor() {
+    this.timer = setInterval(() => {
+      this.progress++;
+      if (this.progress === 100) { clearInterval(this.timer); }
+    }, 20);
   }
 }
