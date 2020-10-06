@@ -8,6 +8,7 @@ import { MatNativeDateModule } from '@angular/material/core';
 import {MatDatepickerModule} from '@angular/material/datepicker';
 import {MatIconModule} from '@angular/material/icon';
 import {MatButtonModule} from '@angular/material/button';
+import {MatChipsModule} from '@angular/material/chips';
 import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
@@ -28,6 +29,7 @@ import { FormsModule } from '@angular/forms';
     MatNativeDateModule,
     MatIconModule,
     MatButtonModule,
+    MatChipsModule,
     FormsModule
   ],
   providers: [],
