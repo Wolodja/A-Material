@@ -1,7 +1,7 @@
 
 @mixin soft-border($border-radius) {
     border: 1px solid #ccc;
-    border-radius: $border-radiu;
+    border-radius: $border-radius;
     padding: 10px;
 }
 
