@@ -1,6 +1,4 @@
-import { EditCourseComponent } from './edit-course/edit-course.component';
 import { Component } from '@angular/core';
-import { MatDialog } from '@angular/material/dialog';
 
 @Component({
   selector: 'app-root',
@@ -9,15 +7,5 @@ import { MatDialog } from '@angular/material/dialog';
 })
 export class AppComponent {
 
-  constructor(private dialog: MatDialog){}
-
-  openDialog(){
-    this.dialog.open(EditCourseComponent, {
-      data: {
-        courseId: 1
-      }
-    })
-    .afterClosed()
-    .subscribe(result => console.log(result));
-  }
+  constructor(){}
 }
